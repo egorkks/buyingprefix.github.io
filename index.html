@@ -10,13 +10,14 @@
             background-color: #f3f3f3;
             margin: 0;
             padding: 0;
-            transition: background-color 0.5s; /* Анимация изменения цвета фона */
+            transition: background-color 0.5s;
         }
         header {
             background-color: #333;
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            animation: fadeIn 1s ease; /* Анимация плавного появления */
         }
         nav {
             background-color: #4CAF50;
@@ -28,7 +29,7 @@
             color: #fff;
             margin: 0 20px;
             font-size: 20px;
-            transition: color 0.5s; /* Анимация изменения цвета текста при наведении */
+            transition: color 0.5s;
         }
         nav a:hover {
             color: #333;
@@ -53,10 +54,10 @@
             text-align: center;
             border-radius: 10px;
             width: 200px;
-            transition: transform 0.3s ease; /* Анимация при наведении на элемент */
+            transition: transform 0.3s ease;
         }
         .pricing div:hover {
-            transform: translateY(-10px);
+            transform: scale(1.05); /* Увеличение при наведении */
         }
         .contact {
             text-align: center;
@@ -74,49 +75,108 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Модальное окно выбора языка */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .language-modal {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .language-modal button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        .language-modal button:hover {
+            background-color: #45a049;
+        }
+
+        /* Анимация плавного появления */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Продажа привилегий в боте ftorovod</h1>
-    </header>
-    <nav>
-        <a href="#pricing">Цены</a>
-        <a href="#contact">Контакты</a>
-    </nav>
-    <section>
-        <h2>Выберите свою привилегию:</h2>
-        <div class="pricing" id="pricing">
-            <div>
-                <h3>Модератор</h3>
-                <p>Цена: 20 лей</p>
-            </div>
-            <div>
-                <h3>Администратор</h3>
-                <p>Цена: 50 лей</p>
-            </div>
-            <div>
-                <h3>Владелец</h3>
-                <p>Цена: 150 лей</p>
-            </div>
-            <div>
-                <h3>Весь бот</h3>
-                <p>Цена: 320 лей</p>
-            </div>
+
+<!-- Модальное окно выбора языка -->
+<div class="overlay" id="languageOverlay">
+    <div class="language-modal">
+        <p>Select your language:</p>
+        <button onclick="switchLanguage('ru')">Russian</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+</div>
+
+<header>
+    <h1>Продажа привилегий в боте ftorovod</h1>
+</header>
+<nav>
+    <a href="#pricing">Цены</a>
+    <a href="#contact">Контакты</a>
+</nav>
+<section>
+    <h2>Выберите свою привилегию:</h2>
+    <div class="pricing" id="pricing">
+        <div>
+            <h3>Модератор</h3>
+            <p>Цена: 20 лей</p>
         </div>
-        <div class="contact" id="contact">
-            <p>Для покупки привилегий обращайтесь по контактам: <a href="https://t.me/w3trr">@w3trr</a></p>
+        <div>
+            <h3>Администратор</h3>
+            <p>Цена: 50 лей</p>
         </div>
-    </section>
-    <footer>
-        <p>© 2024 Продажа привилегий в боте ftorovod</p>
-    </footer>
-    <script>
-        // Добавление переключателя языка
-        function switchLanguage(lang) {
-            document.documentElement.lang = lang;
-            document.body.style.backgroundColor = (lang === 'ru') ? '#f3f3f3' : '#ececec';
-        }
-    </script>
+        <div>
+            <h3>Владелец</h3>
+            <p>Цена: 150 лей</p>
+        </div>
+        <div>
+            <h3>Весь бот</h3>
+            <p>Цена: 320 лей</p>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <p>Для покупки привилегий обращайтесь по контактам: <a href="https://t.me/w3trr">@w3trr</a></p>
+    </div>
+</section>
+<footer>
+    <p>© 2024 Продажа привилегий в боте ftorovod</p>
+</footer>
+
+<script>
+    function switchLanguage(lang) {
+        document.documentElement.lang = lang;
+        document.body.style.backgroundColor = (lang === 'ru') ? '#f3f3f3' : '#ececec';
+        document.getElementById('languageOverlay').style.display = 'none';
+    }
+
+    window.onload = function() {
+        document.getElementById('languageOverlay').style.display = 'flex';
+    };
+</script>
+
 </body>
 </html>
