@@ -5,36 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 600px;
             text-align: center;
             padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            color: #333;
+            color: #3498db;
         }
 
         .price-list {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
             margin-top: 20px;
         }
 
         .item {
-            background-color: #fff;
+            background-color: #ecf0f1;
             padding: 10px;
+            margin: 10px 0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        .item p {
+            margin: 0;
+        }
+
+        .moderator { background-color: #2ecc71; }
+        .administrator { background-color: #e74c3c; }
+        .owner { background-color: #f39c12; }
+        .whole-bot { background-color: #3498db; }
+
         a {
-            color: #007bff;
+            color: #3498db;
             text-decoration: none;
         }
 
@@ -48,16 +68,16 @@
     <div class="container">
         <h1>Добро пожаловать в магазин привилегий Ftorovod бота!</h1>
         <div class="price-list">
-            <div class="item">
+            <div class="item moderator">
                 <p>Модератор: 20 лей</p>
             </div>
-            <div class="item">
+            <div class="item administrator">
                 <p>Администратор: 50 лей</p>
             </div>
-            <div class="item">
+            <div class="item owner">
                 <p>Владелец: 100 лей</p>
             </div>
-            <div class="item">
+            <div class="item whole-bot">
                 <p>Весь бот: 300 лей</p>
             </div>
         </div>
