@@ -25,11 +25,13 @@
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             position: relative;
+            transition: background-color 0.3s ease;
         }
 
         h1 {
             color: #3498db;
             transition: color 0.3s ease;
+            font-size: 24px;
         }
 
         .price-list {
@@ -68,6 +70,17 @@
         }
 
         /* Анимация снежинок */
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            animation: snowfall linear infinite;
+        }
+
         .snowflake {
             position: absolute;
             background: #fff;
@@ -76,21 +89,33 @@
             border-radius: 50%;
             opacity: 0.7;
             pointer-events: none;
-            animation: snowfall linear infinite;
         }
 
         @keyframes snowfall {
             0% {
-                transform: translateY(0) rotate(0deg);
+                transform: translateY(-100vh);
             }
             100% {
-                transform: translateY(100vh) rotate(360deg);
+                transform: translateY(100vh);
             }
         }
 
         /* Плавные переходы для кнопок и текста */
-        .container:hover h1, .container:hover .item, .container:hover a {
+        .container:hover h1,
+        .container:hover .item,
+        .container:hover a {
             transition-duration: 0.5s;
+        }
+
+        /* Новый стиль для мерцания */
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0.5;
+            }
         }
     </style>
     <title>Продажа привилегий в боте Ftorovod</title>
@@ -117,9 +142,26 @@
         <div class="snowflakes">
             <!-- Создаем 50 снежинок -->
             <?php for ($i = 0; $i < 50; $i++) { ?>
-                <div class="snowflake" style="animation-duration: <?php echo rand(5, 20) ?>s; animation-delay: <?php echo rand(0, 20) ?>s; left: <?php echo rand(0, 100) ?>vw;"></div>
+                <div class="snowflake" style="left: <?php echo rand(0, 100) ?>vw; animation-duration: <?php echo rand(5, 20) ?>s; animation-delay: <?php echo rand(0, 20) ?>s;"></div>
             <?php } ?>
         </div>
     </div>
+
+    <script>
+        // JavaScript для эффекта мерцания на пустых полях
+        document.addEventListener('DOMContentLoaded', function () {
+            const inputFields = document.querySelectorAll('input, textarea');
+            
+            inputFields.forEach(function (input) {
+                input.addEventListener('blur', function () {
+                    if (input.value.trim() === '') {
+                        input.classList.add('blink');
+                    } else {
+                        input.classList.remove('blink');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
