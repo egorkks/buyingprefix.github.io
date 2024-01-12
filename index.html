@@ -14,6 +14,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            overflow: hidden;
         }
 
         .container {
@@ -23,10 +24,12 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         h1 {
             color: #3498db;
+            transition: color 0.3s ease;
         }
 
         .price-list {
@@ -42,6 +45,7 @@
             margin: 10px 0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
         }
 
         .item p {
@@ -56,10 +60,37 @@
         a {
             color: #3498db;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Анимация снежинок */
+        .snowflake {
+            position: absolute;
+            background: #fff;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            opacity: 0.7;
+            pointer-events: none;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* Плавные переходы для кнопок и текста */
+        .container:hover h1, .container:hover .item, .container:hover a {
+            transition-duration: 0.5s;
         }
     </style>
     <title>Продажа привилегий в боте Ftorovod</title>
@@ -82,6 +113,13 @@
             </div>
         </div>
         <p>Для покупки обращайтесь к админу в Telegram: <a href="https://t.me/w3trr">@w3trr</a></p>
+        <!-- Добавляем снежинки -->
+        <div class="snowflakes">
+            <!-- Создаем 50 снежинок -->
+            <?php for ($i = 0; $i < 50; $i++) { ?>
+                <div class="snowflake" style="animation-duration: <?php echo rand(5, 20) ?>s; animation-delay: <?php echo rand(0, 20) ?>s; left: <?php echo rand(0, 100) ?>vw;"></div>
+            <?php } ?>
+        </div>
     </div>
 </body>
 </html>
