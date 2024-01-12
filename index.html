@@ -1,164 +1,67 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Продажа привилегий в боте ftorovod</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f3f3f3;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
+            padding: 20px;
         }
-        nav {
-            background-color: #4CAF50;
-            padding: 15px;
-            text-align: center;
-        }
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 20px;
-            font-size: 20px;
-        }
-        section {
-            padding: 40px;
-            text-align: center;
+
+        h1 {
             color: #333;
         }
-        .pricing {
+
+        .price-list {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
+            justify-content: space-around;
+            margin-top: 20px;
         }
-        .pricing div {
+
+        .item {
             background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            width: 200px;
         }
-        .pricing div:hover {
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
+
+        a {
+            color: #007bff;
+            text-decoration: none;
         }
-        .contact {
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #4CAF50;
-            color: #fff;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
+    <title>Продажа привилегий в боте Ftorovod</title>
 </head>
 <body>
-    <header>
-        <h1>Продажа привилегий в боте ftorovod</h1>
-    </header>
-    <nav>
-        <a href="#pricing">Цены</a>
-        <a href="#contact">Контакты</a>
-    </nav>
-
-    <style>
-        .button-design {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-        .button-design:hover {
-            background-color: #45a049;
-        }
-    </style>
-
-    <div>
-        <button class="button-design">Модератор</button>
-        <button class="button-design">Администратор</button>
+    <div class="container">
+        <h1>Добро пожаловать в магазин привилегий Ftorovod бота!</h1>
+        <div class="price-list">
+            <div class="item">
+                <p>Модератор: 20 лей</p>
+            </div>
+            <div class="item">
+                <p>Администратор: 50 лей</p>
+            </div>
+            <div class="item">
+                <p>Владелец: 100 лей</p>
+            </div>
+            <div class="item">
+                <p>Весь бот: 300 лей</p>
+            </div>
+        </div>
+        <p>Для покупки обращайтесь к админу в Telegram: <a href="https://t.me/w3trr">@w3trr</a></p>
     </div>
-    <section>
-        <h2>Выберите свою привилегию:</h2>
-        <div class="pricing" id="pricing">
-            <div>
-                <h3>Модератор</h3>
-                <p>Цена: 20 лей</p>
-            </div>
-            <div>
-                <h3>Администратор</h3>
-                <p>Цена: 50 лей</p>
-            </div>
-            <div>
-
-            <!-- Removed previous button styling code -->
-
-            <style>
-                .button-moderator {
-                    background-color: #4CAF50; /* Green */
-                    /* Other styles remain the same */
-                }
-                .button-administrator {
-                    background-color: #f44336; /* Red */
-                    /* Other styles remain the same */
-                }
-                .button-owner {
-                    background-color: #2196F3; /* Blue */
-                    /* Other styles remain the same */
-                }
-                .button-fullbot {
-                    background-color: #FFC107; /* Amber */
-                    /* Other styles remain the same */
-                }
-            </style>
-
-            <div>
-                <button class="button-moderator">Модератор</button>
-                <button class="button-administrator">Администратор</button>
-                <button class="button-owner">Владелец</button>
-                <button class="button-fullbot">Весь бот</button>
-            </div>
-
-                <h3>Владелец</h3>
-                <p>Цена: 150 лей</p>
-            </div>
-            <div>
-                <h3>Весь бот</h3>
-                <p>Цена: 320 лей</p>
-            </div>
-        </div>
-        <div class="contact" id="contact">
-            <p>Для покупки привилегий обращайтесь по контактам: <a href="https://t.me/w3trr">@w3trr</a></p>
-        </div>
-    </section>
-    <footer>
-        <p>© 2024 Продажа привилегий в боте ftorovod</p>
-    </footer>
 </body>
 </html>
