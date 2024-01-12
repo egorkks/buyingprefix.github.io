@@ -10,6 +10,7 @@
             background-color: #f3f3f3;
             margin: 0;
             padding: 0;
+            transition: background-color 0.5s; /* Анимация изменения цвета фона */
         }
         header {
             background-color: #333;
@@ -27,6 +28,10 @@
             color: #fff;
             margin: 0 20px;
             font-size: 20px;
+            transition: color 0.5s; /* Анимация изменения цвета текста при наведении */
+        }
+        nav a:hover {
+            color: #333;
         }
         section {
             padding: 40px;
@@ -48,10 +53,10 @@
             text-align: center;
             border-radius: 10px;
             width: 200px;
+            transition: transform 0.3s ease; /* Анимация при наведении на элемент */
         }
         .pricing div:hover {
             transform: translateY(-10px);
-            transition: all 0.3s ease;
         }
         .contact {
             text-align: center;
@@ -106,5 +111,12 @@
     <footer>
         <p>© 2024 Продажа привилегий в боте ftorovod</p>
     </footer>
+    <script>
+        // Добавление переключателя языка
+        function switchLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.body.style.backgroundColor = (lang === 'ru') ? '#f3f3f3' : '#ececec';
+        }
+    </script>
 </body>
 </html>
