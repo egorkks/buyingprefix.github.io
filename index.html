@@ -159,4 +159,24 @@
 <script>
     function createSnowflake() {
         const snowflake = document.createElement('div');
-        snowflake.className = 'snowflake
+        snowflake.className = 'snowflake';
+        snowflake.style.left = Math.random() * window.innerWidth + 'px';
+        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
+        document.body.appendChild(snowflake);
+
+        snowflake.addEventListener('animationiteration', function() {
+            document.body.removeChild(snowflake);
+        });
+    }
+
+    function generateSnowfall() {
+        setInterval(createSnowflake, 500);
+    }
+
+    window.onload = function() {
+        generateSnowfall();
+    };
+</script>
+
+</body>
+</html>
