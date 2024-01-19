@@ -6,27 +6,33 @@
   <title>Text Adventure Game</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
       padding: 20px;
-      background-color: #f3f3f3;
+      margin: 0;
+      background: linear-gradient(to bottom, #262626, #1f1f1f);
+      color: #fff;
     }
 
     #game-container {
       max-width: 600px;
       margin: 0 auto;
-      background-color: #fff;
+      background-color: #333;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      transition: background-color 0.5s;
     }
 
     h1 {
-      color: #333;
+      color: #4caf50;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 15px;
     }
 
     p {
-      color: #555;
+      color: #ddd;
+      margin-bottom: 15px;
     }
 
     button {
@@ -41,54 +47,108 @@
       margin: 4px 2px;
       cursor: pointer;
       border-radius: 4px;
+      transition: background-color 0.3s;
     }
 
     button:hover {
       background-color: #45a049;
     }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fadeIn {
+      animation: fadeIn 1s ease-in-out;
+    }
   </style>
 </head>
 <body>
-  <div id="game-container">
+  <div id="game-container" class="fadeIn">
     <h1>Добро пожаловать в приключение!</h1>
-    <p id="game-text">Нажмите кнопку "Начать игру", чтобы начать приключение.</p>
-    <button onclick="startGame()">Начать игру</button>
+    <p id="game-text" class="fadeIn">Нажмите кнопку "Начать игру", чтобы начать приключение.</p>
+    <button onclick="startGame()" class="fadeIn">Начать игру</button>
   </div>
 
   <script>
     let gameText = document.getElementById('game-text');
 
     function startGame() {
-      gameText.innerHTML = 'Вы находитесь в темном лесу. Выберите, куда пойти: <button onclick="goLeft()">Налево</button> или <button onclick="goRight()">Направо</button>';
+      gameText.classList.remove('fadeIn');
+      gameText.style.opacity = 0;
+      setTimeout(() => {
+        gameText.classList.add('fadeIn');
+        gameText.innerHTML = 'Вы находитесь в темном лесу. Выберите, куда пойти: <button onclick="goLeft()">Налево</button> или <button onclick="goRight()">Направо</button>';
+      }, 100);
     }
 
     function goLeft() {
-      gameText.innerHTML = 'Вы выбрали путь налево и наткнулись на старую хижину. Войти в хижину? <button onclick="enterHouse()">Да</button> или <button onclick="startGame()">Нет</button>';
+      gameText.classList.remove('fadeIn');
+      gameText.style.opacity = 0;
+      setTimeout(() => {
+        gameText.classList.add('fadeIn');
+        gameText.innerHTML = 'Вы выбрали путь налево и наткнулись на старую хижину. Войти в хижину? <button onclick="enterHouse()">Да</button> или <button onclick="startGame()">Нет</button>';
+      }, 100);
     }
 
     function goRight() {
-      gameText.innerHTML = 'Вы пошли направо, но столкнулись с рекой. Попробовать переплыть? <button onclick="crossRiver()">Да</button> или <button onclick="startGame()">Нет</button>';
+      gameText.classList.remove('fadeIn');
+      gameText.style.opacity = 0;
+      setTimeout(() => {
+        gameText.classList.add('fadeIn');
+        gameText.innerHTML = 'Вы пошли направо, но столкнулись с рекой. Попробовать переплыть? <button onclick="crossRiver()">Да</button> или <button onclick="startGame()">Нет</button>';
+      }, 100);
     }
 
     function enterHouse() {
       let randomNumber = Math.random();
       if (randomNumber < 0.5) {
-        gameText.innerHTML = 'Вы вошли в хижину и нашли сундук с сокровищами. Поздравляю, вы выиграли!';
+        gameText.classList.remove('fadeIn');
+        gameText.style.opacity = 0;
+        setTimeout(() => {
+          gameText.classList.add('fadeIn');
+          gameText.innerHTML = 'Вы вошли в хижину и нашли сундук с сокровищами. Поздравляю, вы выиграли!';
+        }, 100);
       } else {
-        gameText.innerHTML = 'Вы вошли в хижину и обнаружили, что это засада монстра! Вы проиграли. <button onclick="startGame()">Начать заново</button>';
+        gameText.classList.remove('fadeIn');
+        gameText.style.opacity = 0;
+        setTimeout(() => {
+          gameText.classList.add('fadeIn');
+          gameText.innerHTML = 'Вы вошли в хижину и обнаружили, что это засада монстра! Вы проиграли. <button onclick="startGame()">Начать заново</button>';
+        }, 100);
       }
     }
 
     function crossRiver() {
-      gameText.innerHTML = 'Вы решили переплыть реку, но столкнулись с драконом. Попробовать убежать? <button onclick="runAway()">Да</button> или <button onclick="startGame()">Нет</button>';
+      gameText.classList.remove('fadeIn');
+      gameText.style.opacity = 0;
+      setTimeout(() => {
+        gameText.classList.add('fadeIn');
+        gameText.innerHTML = 'Вы решили переплыть реку, но столкнулись с драконом. Попробовать убежать? <button onclick="runAway()">Да</button> или <button onclick="startGame()">Нет</button>';
+      }, 100);
     }
 
     function runAway() {
       let randomNumber = Math.random();
       if (randomNumber < 0.7) {
-        gameText.innerHTML = 'Вы удачно убежали от дракона! Поздравляю, вы выжили.';
+        gameText.classList.remove('fadeIn');
+        gameText.style.opacity = 0;
+        setTimeout(() => {
+          gameText.classList.add('fadeIn');
+          gameText.innerHTML = 'Вы удачно убежали от дракона! Поздравляю, вы выжили.';
+        }, 100);
       } else {
-        gameText.innerHTML = 'Дракон схватил вас. Конец игры. <button onclick="startGame()">Начать заново</button>';
+        gameText.classList.remove('fadeIn');
+        gameText.style.opacity = 0;
+        setTimeout(() => {
+          gameText.classList.add('fadeIn');
+          gameText.innerHTML = 'Дракон схватил вас. Конец игры. <button onclick="startGame()">Начать заново</button>';
+        }, 100);
       }
     }
   </script>
