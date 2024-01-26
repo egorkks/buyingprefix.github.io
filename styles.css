@@ -206,3 +206,19 @@ footer {
     transform: translateY(100vh) rotate(45deg);
   }
 }
+
+
+
+
+
+
+
+
+
+/* Пример для элемента, который должен иметь parallax-эффект */
+.parallax-element {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
