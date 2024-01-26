@@ -1,59 +1,4 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
-}
-
-main {
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-section {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 20px;
-}
-
-h2 {
-  color: #3498db;
-}
-
-a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #3498db;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-a:hover {
-  background-color: #2980b9;
-}
-
-footer {
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
+/* Ваши общие стили */
 
 body {
   font-family: 'Arial', sans-serif;
@@ -81,11 +26,6 @@ section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   padding: 20px;
-  transition: transform 0.3s ease-in-out;
-}
-
-section:hover {
-  transform: scale(1.05);
 }
 
 h2 {
@@ -107,61 +47,34 @@ a:hover {
   background-color: #2980b9;
 }
 
-footer {
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
+/* Добавленный стиль для анимации раздела */
+section:hover {
+  transform: rotateY(10deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Добавление стилей для снежинок */
+.snowflake-container {
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  animation: slideIn 1s ease-in-out;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: snowfall linear infinite;
 }
 
-
-.scroll-arrow {
-  text-align: center;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-.arrow {
-  display: block;
-  font-size: 24px;
-  text-decoration: none;
-  color: #3498db;
-  transition: color 0.3s ease-in-out;
-}
-
-.arrow:hover {
-  color: #2980b9;
-}
-
-/* Добавленный стиль для плавного скроллинга */
-html {
-  scroll-behavior: smooth;
-}
-
-
-
-
-
-
-
-
-
-
-
+/* Стили для блока "Зачем нужен JavaScript?" */
 #why-js {
   background-color: #3498db;
   color: #fff;
@@ -176,11 +89,13 @@ html {
 
 #why-js h2 {
   font-size: 32px;
+  color: red; /* Добавленный стиль для красного цвета */
 }
 
 #why-js p {
   font-size: 18px;
   line-height: 1.6;
+  color: red; /* Добавленный стиль для красного цвета */
 }
 
 #why-js ul {
@@ -192,95 +107,70 @@ html {
   margin-bottom: 10px;
 }
 
-/* Добавленный стиль для анимации */
-@keyframes rotate {
+/* Добавленный стиль для анимации снежинок */
+@keyframes snowfall {
   0% {
-    transform: rotate(0deg);
+    transform: translateY(0);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateY(100vh);
   }
 }
 
-.scroll-arrow {
+/* Ваши стили социальных сетей */
+footer {
+  background-color: #3498db;
+  color: #fff;
   text-align: center;
+  padding: 1em 0;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0;
+  width: 100%;
 }
 
-.arrow {
-  display: block;
-  font-size: 24px;
+#social-media {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#social-media a {
+  margin-right: 15px;
   text-decoration: none;
   color: #3498db;
-  transition: color 0.3s ease-in-out;
-  animation: rotate 1s infinite linear;
 }
 
-.arrow:hover {
-  color: #2980b9;
+#social-media a:last-child {
+  margin-right: 0; /* Убирает отступ справа у последней ссылки */
 }
 
-/* Добавленный стиль для 3D эффекта */
-section {
-  perspective: 1000px;
+#social-media img {
+  width: 30px;
+  height: 30px;
 }
 
-section:hover {
-  transform: rotateY(10deg);
-  transition: transform 0.5s ease-in-out;
+/* Добавленные стили для кнопки "Связь с нами" */
+#social-media a:not(:last-child) {
+  background-color: #3498db;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
 }
 
-
-
-
-
-/* Стили для снежинок */
-.snowflake-container {
-  
- 
-position: fixed;
-  top: 0;
-  left: 0;
-  
-  pointer-eve
-
-  po
-pointer-events: none;
-  
-  z-ind
-z-index: 9999;
+#social-media a:not(:last-child):hover {
+  background-color: #2980b9;
 }
 
-.snowflake {
-  
-  positio
-position: absolute;
-  width: 10px;
-  
-  
-height: 10px;
-  
-  backgr
-background-color: #fff;
-  border-radius: 50%;
-  
-  animat
-animation: snowfall linear infinite;
+/* Добавленные стили для футера */
+footer {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-/* Анимация падения снежинок */
-@keyframes snowfall {
-  to {
-    
-    transfo
-
-  
-transform: translateY(100vh);
-  }
-}
-
-  }
-}
-`
+</style>
