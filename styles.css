@@ -231,3 +231,56 @@ section:hover {
   transform: rotateY(10deg);
   transition: transform 0.5s ease-in-out;
 }
+
+
+
+
+
+/* Стили для снежинок */
+.snowflake-container {
+  
+ 
+position: fixed;
+  top: 0;
+  left: 0;
+  
+  pointer-eve
+
+  po
+pointer-events: none;
+  
+  z-ind
+z-index: 9999;
+}
+
+.snowflake {
+  
+  positio
+position: absolute;
+  width: 10px;
+  
+  
+height: 10px;
+  
+  backgr
+background-color: #fff;
+  border-radius: 50%;
+  
+  animat
+animation: snowfall linear infinite;
+}
+
+/* Анимация падения снежинок */
+@keyframes snowfall {
+  to {
+    
+    transfo
+
+  
+transform: translateY(100vh);
+  }
+}
+
+  }
+}
+`
