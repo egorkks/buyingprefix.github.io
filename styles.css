@@ -174,3 +174,35 @@ footer {
 }
 
 </style>
+
+
+/* ... Ваши предыдущие стили ... */
+
+/* Добавленные стили для анимации дождя */
+.raindrop-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background-color: #3498db; /* Цвет дождя */
+  opacity: 0.7;
+  animation: rainfall linear infinite;
+}
+
+@keyframes rainfall {
+  0% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(45deg);
+  }
+}
