@@ -1,224 +1,177 @@
-/* Ваши общие стили */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Ваши общие стили */
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
-header {
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
-}
+    header {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
 
-main {
-  max-width: 800px;
-  margin: 20px auto;
-}
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+    }
 
-section {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 20px;
-}
+    section {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
 
-h2 {
-  color: #3498db;
-}
+    h2 {
+      color: #3498db;
+    }
 
-a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #3498db;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  transition: background-color 0.3s ease-in-out;
-}
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease-in-out;
+    }
 
-a:hover {
-  background-color: #2980b9;
-}
+    a:hover {
+      background-color: #2980b9;
+    }
 
-/* Добавленный стиль для анимации раздела */
-section:hover {
-  transform: rotateY(10deg);
-  transition: transform 0.5s ease-in-out;
-}
+    /* Добавленный стиль для анимации раздела */
+    section:hover {
+      transform: rotateY(10deg);
+      transition: transform 0.5s ease-in-out;
+    }
 
-/* Добавление стилей для снежинок */
-.snowflake-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
+    /* Добавление стилей для снежинок */
+    .snowflake-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-.snowflake {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  opacity: 0.7;
-  animation: snowfall linear infinite;
-}
+    .snowflake {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: snowfall linear infinite;
+    }
 
-/* Стили для блока "Зачем нужен JavaScript?" */
-#why-js {
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 40px 0;
-}
+    /* Стили для блока "Зачем нужен JavaScript?" */
+    #why-js {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 40px 0;
+    }
 
-.why-js-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
+    .why-js-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-#why-js h2 {
-  font-size: 32px;
-  color: red; /* Добавленный стиль для красного цвета */
-}
+    #why-js h2 {
+      font-size: 32px;
+      color: #3498db; /* Сохранено, но может быть изменено согласно дизайну */
+    }
 
-#why-js p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: red; /* Добавленный стиль для красного цвета */
-}
+    #why-js p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #3498db; /* Сохранено, но может быть изменено согласно дизайну */
+    }
 
-#why-js ul {
-  list-style-type: none;
-  padding: 0;
-}
+    #why-js ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-#why-js ul li {
-  margin-bottom: 10px;
-}
+    #why-js ul li {
+      margin-bottom: 10px;
+    }
 
-/* Добавленный стиль для анимации снежинок */
-@keyframes snowfall {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(100vh);
-  }
-}
+    /* Добавленный стиль для анимации снежинок */
+    @keyframes snowfall {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
 
-/* Ваши стили социальных сетей */
-footer {
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+    /* Ваши стили социальных сетей и кнопки "Связь с нами" */
 
-#social-media {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    /* Добавленные стили для анимации дождя */
+    .raindrop-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-#social-media a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #3498db;
-}
+    .raindrop {
+      position: absolute;
+      width: 2px;
+      height: 10px;
+      background-color: #3498db; /* Цвет дождя */
+      opacity: 0.7;
+      animation: rainfall linear infinite;
+    }
 
-#social-media a:last-child {
-  margin-right: 0; /* Убирает отступ справа у последней ссылки */
-}
+    @keyframes rainfall {
+      0% {
+        transform: translateY(-10px) rotate(45deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(45deg);
+      }
+    }
+  </style>
+  <title>Курсы по JavaScript</title>
+</head>
+<body>
 
-#social-media img {
-  width: 30px;
-  height: 30px;
-}
+  <!-- Ваш контент здесь -->
 
-/* Добавленные стили для кнопки "Связь с нами" */
-#social-media a:not(:last-child) {
-  background-color: #3498db;
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: #fff;
-}
+  <div class="snowflake-container"></div>
+  <div class="raindrop-container"></div>
 
-#social-media a:not(:last-child):hover {
-  background-color: #2980b9;
-}
+  <footer>
+    <!-- Ваши элементы футера, например, социальные сети -->
+    <div id="social-media">
+      <a href="https://t.me/@w3trr" target="_blank" rel="noopener noreferrer">Связь с нами: Телеграмм</a>
+      <a href="https://www.instagram.com/egorkkks/" target="_blank" rel="noopener noreferrer">Связь с нами: Инстаграмм</a>
+      <!-- Добавьте другие иконки и ссылки, если необходимо -->
+    </div>
+  </footer>
 
-/* Добавленные стили для футера */
-footer {
-  background-color: #3498db;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-</style>
-
-
-/* ... Ваши предыдущие стили ... */
-
-/* Добавленные стили для анимации дождя */
-.raindrop-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.raindrop {
-  position: absolute;
-  width: 2px;
-  height: 10px;
-  background-color: #3498db; /* Цвет дождя */
-  opacity: 0.7;
-  animation: rainfall linear infinite;
-}
-
-@keyframes rainfall {
-  0% {
-    transform: translateY(-10px) rotate(45deg);
-  }
-  100% {
-    transform: translateY(100vh) rotate(45deg);
-  }
-}
-
-
-
-
-
-
-
-
-
-/* Пример для элемента, который должен иметь parallax-эффект */
-.parallax-element {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+</body>
+</html>
