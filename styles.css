@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,13 +97,13 @@
 
     #why-js h2 {
       font-size: 32px;
-      color: #3498db; /* Сохранено, но может быть изменено согласно дизайну */
+      color: #fff; /* Изменено на белый цвет */
     }
 
     #why-js p {
       font-size: 18px;
       line-height: 1.6;
-      color: #3498db; /* Сохранено, но может быть изменено согласно дизайну */
+      color: #fff; /* Изменено на белый цвет */
     }
 
     #why-js ul {
@@ -119,6 +120,7 @@
       0% {
         transform: translateY(0);
       }
+
       100% {
         transform: translateY(100vh);
       }
@@ -150,6 +152,7 @@
       0% {
         transform: translateY(-10px) rotate(45deg);
       }
+
       100% {
         transform: translateY(100vh) rotate(45deg);
       }
@@ -157,6 +160,7 @@
   </style>
   <title>Курсы по JavaScript</title>
 </head>
+
 <body>
 
   <!-- Ваш контент здесь -->
@@ -174,4 +178,5 @@
   </footer>
 
 </body>
+
 </html>
