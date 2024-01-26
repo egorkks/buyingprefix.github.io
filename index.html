@@ -26,14 +26,9 @@
     </section>
 
     <!-- Добавьте другие разделы по мере необходимости -->
-
   </main>
 
-
-
-
-
- <section id="why-js">
+  <section id="why-js">
     <div class="why-js-content">
       <h2>Зачем нужен JavaScript?</h2>
       <p>JavaScript является мощным языком программирования, который применяется для создания интерактивных веб-сайтов. Он обеспечивает следующие функциональности:</p>
@@ -48,93 +43,40 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
-
-
   <div class="snowflake-container">
-  
-  <
-<!-- Перемещайтесь по HTML-документу, чтобы увидеть падающие снежинки -->
+    <!-- Перемещайтесь по HTML-документу, чтобы увидеть падающие снежинки -->
+  </div>
 
-<
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <footer>
+    <!-- Ваши элементы футера, например, социальные сети -->
+    <div id="social-media">
+      <a href="https://t.me/@w3trr" target="_blank" rel="noopener noreferrer">Связь с нами: Телеграмм</a>
+      <a href="https://www.instagram.com/egorkkks/" target="_blank" rel="noopener noreferrer">Связь с нами: Инстаграмм</a>
+      <!-- Добавьте другие иконки и ссылки, если необходимо -->
+    </div>
+  </footer>
 
   <script>
-  // JavaScript для создания снежинок
-  document.addEventListener("DOMConten
+    document.addEventListener("DOMContentLoaded", function() {
+      const snowflakeContainer = document.querySelector(".snowflake-container");
 
-  // JavaScript для создания снежинок
-  document.addEventListener("DOMContentLoaded", function() {
-    const snowflakeContainer = document.querySelector(".snowf
+      function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.style.left = `${Math.random() * 100}vw`; // случайное положение по горизонтали
+        snowflake.style.animationDuration = `${Math.random() * 3 + 1}s`; // случайная продолжительность падения
+        snowflakeContainer.appendChild(snowflake);
 
-  // JavaScript для создания снежинок
-  document.addEventListener("DOMContentLoaded", function() {
-    const snowflakeContainer = document.querySelector(".snowflake-container");
+        // Удаление снежинки после завершения анимации
+        snowflake.addEventListener("animationend", function() {
+          snowflake.remove();
+        });
+      }
 
-    function createSnowflake() {
-      const snowflake = document.createElement("
+      // Создание снежинок каждые 500 миллисекунд
+      setInterval(createSnowflake, 500);
+    });
+  </script>
 
-  // JavaScript для создания снежинок
-  document.addEventListener("DOMContentLoaded", function() {
-    const snowflakeContainer = document.querySelector(".snowflake-container");
-
-    function createSnowflake() {
-      const snowflake = document.createElement("div");
-      snowflake.classList.add("snowfl
-
-  // JavaScript для создания снежинок
-  document.addEventListener("DOMContentLoaded", function() {
-    const snowflakeContainer = document.querySelector(".snowflake-container");
-
-    function createSnowflake() {
-      const snowflake = document.createElement("div");
-      snowflake.classList.add("snowflake");
-      snowflake.style.left = `${Math.random() * 100}vw`; // случайное положение по горизонтали
-      snowflake.style.animationDuration = `${Math.random() * 3 + 1}s`; // случайная продолжительность падения
-      snowflakeContainer.appendChild(snowflake);
-
-      // Удаление снежинки после завершения анимации
-      snowflake.addEventListener("ani
-
-  // JavaScript для создания снежинок
-  document.addEventListener("DOMContentLoaded", function() {
-    const snowflakeContainer = document.querySelector(".snowflake-container");
-
-    function createSnowflake() {
-      const snowflake = document.createElement("div");
-      snowflake.classList.add("snowflake");
-      snowflake.style.left = `${Math.random() * 100}vw`; // случайное положение по горизонтали
-      snowflake.style.animationDuration = `${Math.random() * 3 + 1}s`; // случайная продолжительность падения
-      snowflakeContainer.appendChild(snowflake);
-
-      // Удаление снежинки после завершения анимации
-      snowflake.addEventListener("animationend", function() {
-        snowflake.remove();
-      });
-    }
-
-    // Создание снежинок каждые 500 миллисекунд
-    setInterval(createSnowflake, 500);
-  });
-</script>
+</body>
+</html>
